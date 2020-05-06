@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pressmind IB3 - Example Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <!-- These placeholders are needed to inject some javascript into the header. They must not be omitted -->
+    <!-- The Pressmind IBE will include the following libraries, so make sure you won't include these:
+    latest jquery v.3
+    latest Bootstrap v.4 (including poppler.js)
+    latest vue.js v.2
+    -->
+    ###PRESSMIND_IBE_HEADER_CSS###
+    ###PRESSMIND_IBE_HEADER_SCRIPTS###
+</head>
+<body>
+<h1>
+    This is the Example Layout
+</h1>
+<p>
+    View the files source for information on placeholder variables.
+</p>
+<p>
+    Here goes the content for the IBE:
+</p>
+<div class="pressmind-ibe">
+    <!-- With this placeholder the Pressmind IBE is injected into the layout. It must not be omitted -->
+    ###PRESSMIND_IBE_CONTENT###
+</div>
+<p>
+    This Text is part of the Layout and goes below the contents of the Pressmind IBE
+</p>
+<!-- This placeholder is needed to inject some javascript into the documents footer.  It must not be omitted -->
+###PRESSMIND_IBE_FOOTER_SCRIPTS###
+</body>
+</html>
