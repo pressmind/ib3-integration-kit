@@ -10,5 +10,5 @@ To build a link you need to provide the following get parameters:
 * iho[]=1 (array of ids for housing options with quantifier)
 
 EXAMPLE:  
-https://my_company.pressmind-ibe.net/?imo=1234&idbp=5678&idd=9876&idhp=4321&iho[123]=1&iho[456]=2
+https://my_company.pressmind-ibe.net/?imo=1234&idbp=5678&idd=9876&idhp=4321&iho[123]=1&iho[456]=2  
 Will load the checkout page for the media object 1234 and display 2 housing options(rooms) one of id 123 and two of id 456 tha belong to the date with id 9876.
