@@ -13,7 +13,7 @@ EXAMPLE:
 https://my_company.pressmind-ibe.net/?imo=1234&idbp=5678&idd=9876&idhp=4321&iho[123]=1&iho[456]=2  
 Will load the checkout page for the media object 1234 and display 2 housing options (e.g. rooms) one of id 123 and two of id 456 which belong to the date with id 9876.
 
-##Header and Footer Template Integration
+## Header and Footer Template Integration
 To integrate a custom header and footer resource into the IBE layout, a public accessible html file with the desired contents must be available. 
 This file has to contain the following Placeholder for the IBE to be injected:
 
