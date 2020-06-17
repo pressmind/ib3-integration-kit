@@ -1,4 +1,4 @@
-# Pressmind IB3 Integration Kit
+# pressmind® IB3 Integration Kit
 ## Building a hyperlink to book via the IBE
 
 To build a link you need to provide the following get parameters:
