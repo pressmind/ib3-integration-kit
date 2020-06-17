@@ -27,3 +27,23 @@ This file has to contain the following Placeholder for the IBE to be injected:
 In the example_files folder in this repo you can find the file layout_example.html to use it as a starting point for your custom integration file. 
 
 ### Please make sure that all images and included stylesheets/javascript resources in your custom layout are delivered via https and that an Access-Control-Allow-Origin header is sent for these resources.
+
+## Newsletter integration
+To enable pressmind® IB3 to automatically register to a newsletter service like CleverReach or maileon or a custom implementation you need to place a script on your server that will handle a POST request send by pressmind® IB3.
+The POST request will contain the following POST Parameters (multipart/form-data): 
+
+* email => email address of the customer
+* title => title of the customer
+* first_name => first name of the customer
+* last_name => last name of the customer
+* nationality => nationality of the customer (ISO 2-letter code)
+* gender => gender of the customer (M/F)
+* api_key => the API key that has been stored in the pressmind® IB3 administrators backend
+
+The called script has to return/echo the following JSON:
+```json
+{
+    "success": true/false
+    "message": "String with message in case of success or failure"
+}
+```
