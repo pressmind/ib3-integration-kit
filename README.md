@@ -43,7 +43,9 @@ The POST request will contain the following POST Parameters (multipart/form-data
 The called script has to return/echo the following JSON:
 ```json
 {
-    "success": true/false
+    "success": true/false,
     "message": "String with message in case of success or failure"
 }
 ```
+
+Feel free to download the "newsletter_testscript.php" file from "example_files" to have a test and starting point for your integration.
