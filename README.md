@@ -49,3 +49,6 @@ The called script has to return/echo the following JSON:
 ```
 
 Feel free to download the "newsletter_testscript.php" file from "example_files" to have a test and starting point for your integration.
+
+## Integration Workflow
+![pressmind® IB3 inetgartion workflow](assets/pressmind_ib3_integration.png)
