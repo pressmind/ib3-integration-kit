@@ -26,6 +26,8 @@ This file has to contain the following Placeholder for the IBE to be injected:
 
 In the example_files folder in this repo you can find the file layout_example.html to use it as a starting point for your custom integration file. 
 
+![pressmind® IB3 template structure](assets/ibe-template.png)
+
 ### Please make sure that all images and included stylesheets/javascript resources in your custom layout are delivered via https and that an Access-Control-Allow-Origin header is sent for these resources.
 
 ## Newsletter integration
@@ -51,4 +53,4 @@ The called script has to return/echo the following JSON:
 Feel free to download the "newsletter_testscript.php" file from "example_files" to have a test and starting point for your integration.
 
 ## Integration Workflow
-![pressmind® IB3 inetgartion workflow](assets/pressmind_ib3_integration.png)
+![pressmind® IB3 integration workflow](assets/pressmind_ib3_integration.png)
