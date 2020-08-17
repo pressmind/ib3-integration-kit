@@ -3,15 +3,26 @@
 
 To build a link you need to provide the following get parameters:
 
-* imo (id of media object)
-* idbp (id of booking package)
-* idd (id of travelling date)
-* idhp (id of housing package)
-* iho[]=1 (array of ids for housing options with quantifier)
+* imo (id of media object) REQUIRED
+* idd (id of travelling date) REQUIRED
+* iho[]=1 (array of ids for housing options with quantifier) or ido (id of option (housing option, ticket, sightseeing, extra; depending on the price mix of the booking package)) OPTIONAL
+* idbp (id of booking package) REQUIRED IF iho or ido is set
+* idhp (id of housing package) REQUIRED IF iho or ido is set
+* dc (discount code) OPTIONAL (if given, the discount code will be checked right before the checkout and the discount will automatically be added to the booking, if applicable, eg. configured in the backend) THIS WILL WORK ONLY FOR THE pressmind® IBE. For Kuschick bookings the Code has to be set in the Kuschick administration.
+* rt (return url) OPTIONAL (BASE64 encoded URL of the original detail page, if set, will be use for a link to return to the detail page)
 
-EXAMPLE:  
+EXAMPLES:  
 https://my_company.pressmind-ibe.net/?imo=1234&idbp=5678&idd=9876&idhp=4321&iho[123]=1&iho[456]=2  
 Will load the checkout page for the media object 1234 and display 2 housing options (e.g. rooms) one of id 123 and two of id 456 which belong to the date with id 9876.
+
+https://my_company.pressmind-ibe.net/?imo=1234&idbp=5678&idd=9876&idhp=4321&ido=123  
+Will load the checkout page for the media object 1234 and display the option set in ido
+
+https://my_company.pressmind-ibe.net/?imo=1234&idd=9876  
+Will load the checkout page for the media object 1234 and additionally display a step in which the desired housing option can be chosen by the user  
+
+https://my_company.pressmind-ibe.net/?imo=1234&idbp=5678&idd=9876&idhp=4321&ido=123&dc=EARLYBIRD12345  
+Will load the checkout page for the media object 1234 and display the option set in ido, in the last step the promotion code EARLYBIRD12345 will be discounted to the booking, if applicable. 
 
 ## Header and Footer Template Integration
 To integrate a custom header and footer resource into the IBE layout, a public accessible html file with the desired contents must be available. 
