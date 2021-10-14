@@ -63,7 +63,7 @@ The called script has to return/echo the following JSON:
 
 Feel free to download the "newsletter_testscript.php" file from "example_files" to have a test and starting point for your integration.
 
-##Set Header Contents with pressmind® tags
+## Set Header Contents with pressmind® tags
 To set the contents of the Header, you need to set the following tags to the according pressmind® data fields as shown in the image below:  
 * pressmind-ib3.teaser-image
 * pressmind-ib3.hotel-trust-text
