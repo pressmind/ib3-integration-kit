@@ -8,6 +8,7 @@ To build a link you need to provide the following get parameters:
 * iho[]=1 (array of ids for housing options with quantifier) or ido (id of option (housing option, ticket, sightseeing, extra; depending on the price mix of the booking package)) OPTIONAL
 * idbp (id of booking package) REQUIRED IF iho or ido is set
 * idhp (id of housing package) REQUIRED IF iho or ido is set
+* ida (agency id) OPTIONAL (Kuschick CRS only! If given the agency id will be submitted in the requests to Kuschick CRS)
 * dc (discount code) OPTIONAL (if given, the discount code will be checked right before the checkout and the discount will automatically be added to the booking, if applicable, eg. configured in the backend) THIS WILL WORK ONLY FOR THE pressmind® IBE. For Kuschick bookings the Code has to be set in the Kuschick administration.
 * rt (return url) OPTIONAL (BASE64 encoded URL of the original detail page, if set, will be use for a link to return to the detail page)
 
