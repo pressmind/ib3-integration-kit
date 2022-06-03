@@ -12,6 +12,10 @@ To build a link you need to provide the following get parameters:
 * ``dc`` (discount code) OPTIONAL (if given, the discount code will be checked right before the checkout and the discount will automatically be added to the booking, if applicable, eg. configured in the backend) THIS WILL WORK ONLY FOR THE pressmind® IBE. For Kuschick bookings the Code has to be set in the Kuschick administration.
 * ``rt`` (return url) OPTIONAL (BASE64 encoded URL of the original detail page, if set, will be use for a link to return to the detail page)
 * ``t`` (booking type) OPTIONAL possible values request|option|fix
+* ``idt1`` (transport id way 1) departure transport OPTIONAL
+* ``idt2`` (transport id way 2) arrival transport OPTIONAL
+* ``tt`` (transport type) arrival transport OPTIONAL
+* ``ids`` (id season) OPTIONAL
 
 EXAMPLES:  
 https://my_company.pressmind-ibe.net/?imo=1234&idbp=5678&idd=9876&idhp=4321&iho[123]=1&iho[456]=2  
@@ -72,9 +76,14 @@ To set the contents of the Header, you need to set the following tags to the acc
 * pressmind-ib3.trustbox-text
 * pressmind-ib3.services-box-title
 * pressmind-ib3.services-box-content
+* pressmind-ib3.destinations
+* pressmind-ib3.travel-types
 
 ![pressmind® IB3 header tags](assets/pressmind_ib3_tags_for_header.jpg)
 
+## Google Tagmanager Integration
+[Setup Google Tagmanager / Datalayer](gtm-datalayer.md)
 
 ## Integration Workflow
 ![pressmind® IB3 integration workflow](assets/pressmind_ib3_integration.png)
+
