@@ -15,7 +15,7 @@ The pressmind® IB3 pushes the following datalayers:
 |ib3.bookedFailure| booking process can not be completed (technical error)|
 
 ### Example Payload
-```json
+```js
 {
   event: "ib3.booked",
   ecommerce: {
