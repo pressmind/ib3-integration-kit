@@ -1,7 +1,7 @@
 # GTM Datalayer
 
 ## 1. Activate GTM
-Go to "IB3 Backend/Sonstige/Tracking" and active GTM and enter the GTM-ID.
+Go to "IB3 Backend/Sonstige/Tracking" and activate GTM and enter the GTM-ID.
 
 ![](assets/gtm-datalayer-01.jpg)
 
