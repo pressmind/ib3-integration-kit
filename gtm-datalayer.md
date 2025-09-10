@@ -19,10 +19,11 @@ The pressmind® IB3 pushes the following datalayers:
 {
   event: "ib3.booked",
   ecommerce: {
+    page_type: "basket",
+    order_id: "12345",
     items: [
       {
-        id_media_object: 1264338,
-        code: "ACND",
+        id: 1264338,
         name: "Mit dem Glacier-Express nach Zermatt",
         destination: "Italien",
         travel_type: "Rundreisen",
