@@ -1,38 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <title>Pressmind IB3 - Example Layout</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
-    <!-- These placeholders are needed to inject some javascript into the header. They must not be omitted -->
-    <!-- The Pressmind IBE will include the following libraries, so make sure you won't include these:
-    latest jquery v.3
-    latest Bootstrap v.4 (including poppler.js)
-    latest vue.js v.2
+
+    <!--
+        Viewport Meta Tag (optional):
+        If you include your own viewport meta tag here, the IBE will use it.
+        If you omit it, the IBE automatically injects a default:
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        The default disables pinch-to-zoom on mobile devices to prevent
+        layout issues during the booking process.
+        If you want to allow zooming (recommended for WCAG AA compliance),
+        include your own tag:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     -->
-    <!--IMPORTANT:
-    Please make sure that all images and included stylesheets/javascript resources are delivered via https and that a Access-Control-Allow-Origin header is sent for these resources-->
-    ###PRESSMIND_IBE_HEADER_CSS###
-    ###PRESSMIND_IBE_HEADER_SCRIPTS###
+
+    <!--
+        REQUIRED PLACEHOLDERS - Header Assets:
+        The IBE injects its CSS and JavaScript dependencies here.
+        Use HTML comment syntax so the placeholders don't render
+        as visible text when opening this file directly in a browser.
+    -->
+    <!--###PRESSMIND_IBE_HEADER_CSS###-->
+    <!--###PRESSMIND_IBE_HEADER_SCRIPTS###-->
+
+    <!-- Reset IBE-injected margin-top on #pressmind_ib3 (cannot be set inline; target is injected by IBE). -->
+    <style>.ibe-content-wrapper #pressmind_ib3 { margin-top: 0 !important; }</style>
 </head>
 <body>
-<h1>
-    This is the Example Layout
-</h1>
-<p>
-    View the files source for information on placeholder variables.
-</p>
-<p>
-    Here goes the content for the IBE:
-</p>
-<div class="pressmind-ibe">
-    <!-- With this placeholder the Pressmind IBE is injected into the layout. It must not be omitted -->
-    ###PRESSMIND_IBE_CONTENT###
-</div>
-<p>
-    This Text is part of the Layout and goes below the contents of the Pressmind IBE
-</p>
-<!-- This placeholder is needed to inject some javascript into the documents footer.  It must not be omitted -->
-###PRESSMIND_IBE_FOOTER_SCRIPTS###
+
+    <!--
+        WCAG AA: All visible page content should be contained within landmark elements.
+        Use <header> and <footer>. Do NOT use <main>: the IBE sets role="main" on
+        #pressmind_ib3. A template <main> would create a duplicate main landmark.
+        Use a <div> to wrap the IBE content placeholder.
+    -->
+
+    <!-- LANDMARK: <header> - Your site header (logo, navigation). Sticky so StepBar sticks below it. -->
+    <header style="position: sticky; top: 0; z-index: 1000; background-color: inherit;">
+        <!-- Example: company logo, main navigation, service hotline -->
+    </header>
+
+    <!-- Content wrapper (no <main> - IBE provides the main landmark). -->
+    <div class="ibe-content-wrapper">
+        <!-- REQUIRED: IBE booking engine is injected here. -->
+        <!--###PRESSMIND_IBE_CONTENT###-->
+    </div>
+
+    <!-- LANDMARK: <footer> - Your site footer (legal links, contact). -->
+    <footer>
+        <!-- Example: company info, legal links (privacy policy, imprint) -->
+    </footer>
+
+    <!--
+        REQUIRED PLACEHOLDER - Footer Scripts:
+        The IBE injects its JavaScript libraries here (jQuery, Bootstrap, Vue.js, etc.).
+        Must be placed before </body>. Do NOT include your own copies of
+        jQuery, Bootstrap, or Vue.js - they are already provided by the IBE.
+    -->
+    <!--###PRESSMIND_IBE_FOOTER_SCRIPTS###-->
+
 </body>
 </html>
